@@ -1,0 +1,149 @@
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.react-multiple-carousel__arrow {
+  border-radius: 50% !important;
+  border: 1px solid #edb1b1 !important;
+  background: #FFFFFF !important;
+  min-width: 27px !important;
+  min-height: inherit !important;
+}
+.react-multiple-carousel__arrow::before {
+  font-size: 15px !important;
+  padding: 4px !important;
+  color: #edb1b1 !important;
+}
+.makeStyles-root-15 {
+  max-width: 295px;
+  margin: auto !important;
+}
+.MuiCardContent-root {
+  padding: 0em .8em !important;
+}
+.MuiPaper-root.MuiCard-root.makeStyles-root-11.MuiPaper-elevation1.MuiPaper-rounded {
+  padding-bottom: 0.6em !important;
+}
+.makeStyles-root-23 {
+  margin: auto !important;
+}
+svg.MuiSvgIcon-root {
+  padding-bottom: .2em;
+}
+
+/* .makeStyles-media-4 {
+  height: 20em !important;
+}
+.makeStyles-media-12 {
+  height: 20em !important;
+} */
+.MuiTypography-h6 {
+  font-weight: 600 !important;
+  font-size:.8rem !important;
+  text-align: left !important;
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* .MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-12.MuiGrid-grid-md-4.MuiGrid-grid-lg-4 {
+  border-bottom: 1px solid gray !important;
+}
+.MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-12.MuiGrid-grid-md-12.MuiGrid-grid-lg-8 {
+  border-bottom: 1px solid gray !important;
+} */
+.leftPart{
+  padding: 1em 5em;
+}
+.reset {
+  display: inline;
+  float: right;
+  margin-top: .5em;
+  color: gray;
+  font-size: .8em;
+}
+.filter{
+  font-size: 1.2em;
+  display: inline;
+  float: left;
+  margin: auto;
+}
+.leftHeader{
+  display : block;
+}
+.rightHeader{
+  text-align: left;
+  font-size: 1.1em;
+}
+.MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-12.MuiGrid-grid-sm-6.MuiGrid-grid-md-4.MuiGrid-grid-lg-4 {
+  padding: .5em;
+}
+.MuiGrid-grid-lg-12 {
+  text-align: left;
+  padding-bottom: 1em;
+}
+
+.MuiSvgIcon-root {
+  vertical-align: middle !important;
+  font-size: 1.2em !important;
+  color: grey !important;
+}
+.makeStyles-root-3 {
+  max-width: 295px;
+  margin: auto !important;
+}
+@media(min-width:1024px){
+  .react-multiple-carousel__arrow--right {
+    right: 0 !important;
+  }
+  .react-multiple-carousel__arrow--left {
+    left: 0 !important;
+    
+}
+/* .makeStyles-media-4 {
+  height: 18em !important;
+} */
+.makeStyles-media-12 {
+  height: 18em !important;
+}
+}
+@media(min-width:1300px){
+/* 
+  .makeStyles-media-4 {
+    height: 20em !important;
+  }
+  .makeStyles-media-12 {
+    height: 20em !important;
+  } */
+  }

@@ -1,0 +1,30 @@
+.topCardContainer{
+    padding: 1em 1em;
+     background: #ffe5ff;
+}
+.header{
+    margin: auto;
+    padding: .5em .8em;
+}
+.cartItem {
+    text-align: left;
+    font-weight: 700;
+    color: #545454;
+}
+.city{
+    color: #615f5f;
+    margin: auto;
+    line-height: 1.2em;
+    display:inline;
+}
+.reorder{
+    float: right;
+    margin-top: -.5em;
+    margin-bottom: .8em;
+    color: red;
+    font-weight: 700;
+    cursor: pointer;
+}
+.reorder:hover{
+    color:green
+}
