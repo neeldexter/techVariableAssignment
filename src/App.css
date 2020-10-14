@@ -84,7 +84,7 @@ svg.MuiSvgIcon-root {
   border-bottom: 1px solid gray !important;
 } */
 .leftPart{
-  padding: 1em 5em;
+  padding: 1em 3em;
 }
 .reset {
   display: inline;
@@ -105,9 +105,13 @@ svg.MuiSvgIcon-root {
 .rightHeader{
   text-align: left;
   font-size: 1.1em;
+  padding-left: .5em;
 }
 .MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-12.MuiGrid-grid-sm-6.MuiGrid-grid-md-4.MuiGrid-grid-lg-4 {
-  padding: .5em;
+padding: .5em !important;;
+}
+.MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-12.MuiGrid-grid-sm-12.MuiGrid-grid-md-12.MuiGrid-grid-lg-12 {
+  padding-left: .5em !important;
 }
 .MuiGrid-grid-lg-12 {
   text-align: left;
@@ -123,6 +127,44 @@ svg.MuiSvgIcon-root {
   max-width: 295px;
   margin: auto !important;
 }
+.sliderChng {
+  width: 75%;
+  margin: auto;
+}
+.MuiFormGroup-root.MuiFormGroup-row {
+  padding-left: 3em !important;
+}
+span.MuiSlider-thumb.MuiSlider-thumbColorPrimary {
+  color: white !important;
+  border: 1px solid #ef5f78 !important;
+  width: 1em !important;
+  height: 1em !important;
+  margin-top: -.4em !important;
+}
+span.MuiSlider-rail {
+  color: #e83446 !important;
+  height: .2em !important;
+}
+span.MuiSlider-track {
+  color: #e83446 !important;
+}
+.MuiGrid-grid-xs-12 {
+  padding: .5em 0 !important;
+}
+p.formatTop {
+  margin-left: 3em;
+  margin-top: .7em;
+  font-weight: 600;
+}
+
+.MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-12.MuiGrid-grid-md-8.MuiGrid-grid-lg-8 {
+  border-left: 1px solid black;
+  padding-left: .5em !important;
+}
+span.rightArr {
+  padding-left: 8em;
+}
+
 @media(min-width:1024px){
   .react-multiple-carousel__arrow--right {
     right: 0 !important;
@@ -146,4 +188,27 @@ svg.MuiSvgIcon-root {
   .makeStyles-media-12 {
     height: 20em !important;
   } */
+  }
+  @media(max-width:767px){
+    .sliderChng {
+      width: 90%;
+      margin: auto;
+  }
+  .leftPart {
+    padding: .8em;
+    font-size: .8em;
+}
+.rightHeader {
+  padding: 0 .8em;
+}
+.MuiFormGroup-root.MuiFormGroup-row {
+  padding-left: .8em !important;
+}
+p.formatTop {
+  margin-left: 1em;
+}
+.MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-12.MuiGrid-grid-md-8.MuiGrid-grid-lg-8 {
+  border:none !important;
+}
+
   }

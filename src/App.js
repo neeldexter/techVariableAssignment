@@ -1,27 +1,34 @@
 import React, { useState } from 'react';
 import './App.css';
-import { Card, CardContent, Typography, Grid, TextField } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 import { data, commonOrderData } from './cartDetails/cartItems';
+
+//ChildComponents
 
 import TopCard from './components/commonOrder';
 import MainCart from './components/mainCart';
 import SliderChange from './components/slider';
 import FilterData from './components/filterCheckbox';
+import OccasionCheck from './components/filterCheckboxOccasion';
+import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
+
+
 function App() {
 
   const [state, setState] = useState(data);
-
-  const changeData = () => setState(state =>
-    data.filter(priceNew => {
-      return priceNew.price > 500
-    })
-  );
   const [commonState, setcommonState] = useState(commonOrderData);
+
+
+  const [toggle, setToggle] = useState(false);
+  const [toggleOc, setToggleOc] = useState(false);
+
   const format = state.map(data => {
     return (
       data.format
     )
   })
+
+  // BoxFilteration
   const handlerRating = () => setState(state =>
     data.filter(rating => {
       return rating.rating >= 5
@@ -42,18 +49,61 @@ function App() {
       return dist.distance <= 5
     })
   );
-  // const changeDataFrequent = () => setcommonState(state =>
-  //   commonOrderData.filter(ok => {
-  //     return ok.price > 500
-  //   })
-  // );
+
+  // Slider
+  const slider = (val) => {
+
+    var sliderVal = val * 100
+    handleChangeNew(sliderVal)
+  }
+  const handleChangeNew = (slides) => setState(state =>
+    data.filter(rating => {
+      return rating.price >= slides
+    })
+  );
+
+
+  // FirsCheckBlock
+  const checkVal = (val, booleanVal) => {
+    console.log("check", val)
+    var type = val
+    if (booleanVal !== false)
+      handleChangeCheck(type)
+    else setState(data)
+  }
+
+  const handleChangeCheck = (type) => setState(state =>
+    data.filter(newType => {
+      return newType.format === type
+    })
+  );
+
+
+  const checkValOccasion = (val, booleanVal) => {
+    console.log("checkOcc", val)
+    var type = val
+    if (booleanVal !== false)
+      handleChangeCheckOccassion(type)
+    else setState(data)
+  }
+  const handleChangeCheckOccassion = (type) => setState(state =>
+    data.filter(newType => {
+      return newType.occassion === type
+    })
+  );
+
+  const handlerSort = () => {
+
+    // data.sort((a, b) => parseFloat(b.rating) - parseFloat(a.rating));
+    // setState(data)
+    { console.log(state.sort((a, b) => parseFloat(b.rating) - parseFloat(a.rating))) }
+    // console.log("hi", state)
+  }
 
   return (
     <div className="App">
 
       <Grid container>
-        <button onClick={changeData}>change</button>
-
         <Grid item xs={12} md={12} lg={12}>
           <TopCard commonState={commonState} />
         </Grid>
@@ -62,22 +112,42 @@ function App() {
             <div className="leftHeader">
               <h3 className="filter">Filters </h3> <span className="reset">Reset All</span>
             </div>
-            <div>
-              {/* <FilterData format={format} /> */}
-              {/* <FilterData value="hello" /> */}
+            <div className="newStyleUnder">
             </div>
           </div>
+
+
           <Grid container>
             <Grid item xs={12} md={12} lg={12}>
-              <SliderChange />
+              <p className="formatTop" onClick={() => setToggle(!toggle)}>Format <span className="rightArr"><KeyboardArrowDownIcon /></span></p>
+              {toggle === false ? <div className="toggle">
+                <FilterData checkVal={checkVal} />
+              </div> : null}
+
+            </Grid>
+            <Grid item xs={12} md={12} lg={12}>
+              <div className="sliderChng">
+                <SliderChange slider={slider} />
+              </div>
+
+            </Grid>
+            <Grid item xs={12} md={12} lg={12}>
+              <p className="formatTop" onClick={() => setToggleOc(!toggleOc)}>Occassion <span className="rightArr"><KeyboardArrowDownIcon /></span></p>
+              {toggleOc === false ? <div className="toggle">
+                <OccasionCheck checkValOccasion={checkValOccasion} />
+              </div> : null}
+
             </Grid>
 
           </Grid>
         </Grid>
-        <Grid item xs={12} md={12} lg={8}>
+
+
+
+        <Grid item xs={12} md={8} lg={8}>
           <h3 className="rightHeader">Results({state.length})</h3>
           <MainCart cartDetails={state} handler={handlerRating} handlerPrice={handlerPrice}
-            handlerNonVeg={handlerNonVeg} handlerDistance={handlerDistance} />
+            handlerNonVeg={handlerNonVeg} handlerDistance={handlerDistance} handlerSort={handlerSort} />
         </Grid>
       </Grid>
     </div>

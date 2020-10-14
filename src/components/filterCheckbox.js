@@ -14,21 +14,27 @@ import FavoriteBorder from '@material-ui/icons/FavoriteBorder';
 
 
 const FilterData = (props) => {
+    // const [state, setState] = useState({
+    //     LunchBox: false,
+    //     snackBox: false,
+    //     Buffet: false,
+    //     FoodTrucks: false
+    // });
     const [state, setState] = React.useState({
+        Buffet: false,
         LunchBox: false,
         snackBox: false,
-        Buffet: false,
-        FoodTrucks: false
     });
     const handleChange = (event) => {
         setState({ ...state, [event.target.name]: event.target.checked });
+        props.checkVal(event.target.name, event.target.checked)
     };
 
     return (
         <div>
             <Grid item xs={12} sm={12} md={12} lg={12}>
 
-                {props.format.map(formatName => {
+                {/* {props.format.map(formatName => {
                     return (
                         <FormGroup row>
                             <FormControlLabel
@@ -38,7 +44,25 @@ const FilterData = (props) => {
                         </FormGroup>
 
                     )
-                })}
+                })} */}
+                <FormGroup row>
+                    <FormControlLabel
+                        control={<Checkbox checked={state.Buffet} onChange={handleChange} name="Buffet" />}
+                        label="Buffet"
+                    />
+                </FormGroup>
+                <FormGroup row>
+                    <FormControlLabel
+                        control={<Checkbox checked={state.LunchBox} onChange={handleChange} name="LunchBox" />}
+                        label="LunchBox"
+                    />
+                </FormGroup>
+                <FormGroup row>
+                    <FormControlLabel
+                        control={<Checkbox checked={state.snackBox} onChange={handleChange} name="snackBox" />}
+                        label="SnackBox"
+                    />
+                </FormGroup>
 
             </Grid>
 

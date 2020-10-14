@@ -8,7 +8,7 @@ export const data = [
         "dishCount": "20",
         "image": "https://knowbbies.com/storage/courses/June2018/35118898_1675576969163519_65233698458435584_n-medium.jpg",
         "format": "LunchBox",
-        "occassion": "Baby Shower",
+        "occassion": "BabyShower",
         "type": "nonveg",
         "distance": "6"
 
@@ -21,8 +21,8 @@ export const data = [
         "ratingCount": "299",
         "dishCount": "10",
         "image": "https://img.theweek.in/content/dam/week/webworld/feature/lifestyle/2017/december/chicken-biriyani.jpg",
-        "format": "SnackBox",
-        "occassion": "House Warming",
+        "format": "snackBox",
+        "occassion": "HouseWarming",
         "type": "nonveg",
         "distance": "6"
     },
@@ -35,7 +35,7 @@ export const data = [
         "dishCount": "10",
         "image": "https://images.herzindagi.info/image/2020/May/summer.jpg",
         "format": "FoodTrucks",
-        "occassion": "House Party",
+        "occassion": "HouseParty",
         "type": "nonveg",
         "distance": "3"
     },
@@ -61,7 +61,7 @@ export const data = [
         "dishCount": "12",
         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRzE6rjbvY21wYDrSPWhKgu13SS-80bHvvzrw&usqp=CAU",
         "format": "Buffet",
-        "occassion": "Baby Shower",
+        "occassion": "BabyShower",
         "type": "veg",
         "distance": "4"
     },
@@ -73,10 +73,36 @@ export const data = [
         "ratingCount": "323",
         "dishCount": "12",
         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQXglh175PqV_jA__yalRqW8G362bapBsjsKg&usqp=CAU",
-        "format": "Buffet",
-        "occassion": "Baby Shower",
+        "format": "snackBox",
+        "occassion": "BabyShower",
         "type": "veg",
         "distance": "7"
+    },
+    {
+        "id": "7",
+        "price": "1200",
+        "rating": "4.9",
+        "color": "yellow",
+        "ratingCount": "688",
+        "dishCount": "18",
+        "image": "https://www.listchallenges.com/f/lists/3d06c742-15cc-49b2-8845-7ef42d0c9f97.jpg",
+        "format": "LunchBox",
+        "occassion": "HouseParty",
+        "type": "nonveg",
+        "distance": "8"
+    },
+    {
+        "id": "8",
+        "price": "1900",
+        "rating": "2.3",
+        "color": "#e52364",
+        "ratingCount": "876",
+        "dishCount": "11",
+        "image": "https://asset20.ckassets.com/blog/wp-content/uploads/sites/5/2019/11/1-1.jpg",
+        "format": "LunchBox",
+        "occassion": "BabyShower",
+        "type": "nonveg",
+        "distance": "8"
     },
 
 ];
@@ -91,8 +117,8 @@ export const commonOrderData = [
         "ratingCount": "200",
         "dishCount": "20",
         "image": "https://www.listchallenges.com/f/lists/3d06c742-15cc-49b2-8845-7ef42d0c9f97.jpg",
-        "format": "Lunch Box",
-        "occassion": "Baby Shower",
+        "format": "LunchBox",
+        "occassion": "BabyShower",
 
     },
     {
@@ -104,8 +130,8 @@ export const commonOrderData = [
         "ratingCount": "299",
         "dishCount": "10",
         "image": "https://www.rd.com/wp-content/uploads/2018/12/shutterstock_1161597079.jpg",
-        "format": "Snack Box",
-        "occassion": "House Warming",
+        "format": "snack Box",
+        "occassion": "HouseWarming",
     },
     {
         "id": "3",
@@ -117,7 +143,7 @@ export const commonOrderData = [
         "dishCount": "10",
         "image": "https://i1.wp.com/www.eatthis.com/wp-content/uploads/media/images/ext/305133437/burger-king-spread.jpg?fit=1024%2C750&ssl=1",
         "format": "Food Trucks",
-        "occassion": "House Party",
+        "occassion": "HouseParty",
     },
     {
         "id": "4",

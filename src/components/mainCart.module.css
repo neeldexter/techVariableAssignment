@@ -1,3 +1,8 @@
+.noData{
+    text-align: center;
+    color:red
+}
+
 .filtering {
     display: initial;
     padding: .4em .7em;
@@ -41,6 +46,20 @@ p{
     display: inline;
     float: left;
 }
+.popular{
+    display: inline;
+    font-size: .9em;
+    float: right;
+    padding-right: .5em;
+    color: grey;
+    font-weight: 600;
+}
+.sort{
+    border: 1px solid black;
+    padding: .2em;
+    border-radius: 5px;
+    color: grey;
+}
 @media(max-width:767px){
     .filtering{
         font-size: .5em;
@@ -49,5 +68,10 @@ p{
     }
     .rating{
         width: 18%;
+    }
+    .popular{
+        display: block;
+        margin: 1em;
+        font-size: .6em;
     }
 }
