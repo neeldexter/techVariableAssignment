@@ -12,7 +12,7 @@ import { Card, CardContent, Typography, Grid, TextField, CardMedia, CardActionAr
 
 const TopCard = (props) => {
     { console.log("common", props.commonState) }
-
+    const [state, setState] = useState(false);
 
     const responsive = {
         superLargeDesktop: {
@@ -51,15 +51,16 @@ const TopCard = (props) => {
     });
     const classes = useStyles();
 
-
+    const handleOrder = () => {
+        // alert("Work in Progress")
+        console.log("okkk")
+    }
     return (
         <div className={styles.topCardContainer}>
 
             <h5 className={styles.header}>MOST FREQUENTLY ORDERED</h5>
 
             <Carousel responsive={responsive}>
-                {/* <div>Item 1</div>
-                <div>Item 2</div> */}
                 {props.commonState.map(data => {
 
                     { console.log("Hello", data.image) }
@@ -79,15 +80,14 @@ const TopCard = (props) => {
                                         {data.hotel}
                                     </p>
                                     <p className={styles.city}>{data.city}</p>
-                                    <p className={styles.reorder}>RE-ORDER</p>
+                                    <p className={styles.reorder} onClick={() => setState(true)}>RE-ORDER</p>
                                 </CardContent>
                             </CardActionArea>
                         </Card>
                     )
                 })}
-                {/* <div>Item 4</div>
-                <div>Item 4</div> */}
             </Carousel>
+            {state ? <p className={styles.errorMsg}>Work in progress... will be updated soon...</p> : null}
         </div>
     )
 }

@@ -28,3 +28,9 @@
 .reorder:hover{
     color:green
 }
+
+.errorMsg {
+    text-align: center;
+    font-style: italic;
+    color: red;
+}
